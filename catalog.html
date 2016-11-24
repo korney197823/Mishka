@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Каталог товаров</title>
+</head>
+<body>
+  <header class="page-header">
+    <div class="top">
+      <div class="logo">
+        <a href="index.html" class="logo__link"><img src="http://placehold.it/90x45" alt="Mishka" class="logo__img"></a>
+      </div>
+      <button class="btn-toggle" type="button">open/close</button>
+    </div>
+    <nav class="menu">
+      <ul class="menu__items">
+        <li class="menu__item"><a href="#" class="menu__link">Каталог товаров</a></li>
+        <li class="menu__item"><a href="form.html" class="menu__link">Вязание на заказ</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Поиск по сайту</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+    <div class="promo">
+      <h2 class="promo__title">Каталог товаров</h2>
+    </div>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <div class="product__img-wrap">
+        <img src="http://placehold.it/260x195" alt="" class="product__img">
+        <h3 class="product__title">Зайчик-попрыгайчик</h3>
+        <p class="product__description">Рост 30см, вес 200 г</p>
+        <span class="product__price">1200 руб.</span>
+        <a href="#" class="product__add">Добавить в корзину</a>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product__img-wrap">
+        <img src="http://placehold.it/260x195" alt="" class="product__img">
+        <h3 class="product__title">Корзинка для белья</h3>
+        <p class="product__description">Диаметр 15см, высота 10 см</p>
+        <span class="product__price">690 руб.</span>
+        <a href="#" class="product__add">Добавить в корзину</a>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product__img-wrap">
+        <img src="http://placehold.it/260x195" alt="" class="product__img">
+        <h3 class="product__title">Большая корзинка
+          для игрушек</h3>
+        <p class="product__description">Диаметр 30см, высота 30см</p>
+        <span class="product__price">1500 руб.</span>
+        <a href="#" class="product__add">Добавить в корзину</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="production">
+    <h3 class="production__title">Процесс производства</h3>
+    <div class="production__video-wrap">
+      <img src="http://placehold.it/260x150">
+    </div>
+    <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
+      как появляются наши товары.</p>
+    <button class="btn" type="button">Сделать заказ</button>
+  </section>
+
+  <footer class="page-footer">
+    <div class="social">
+      <a href="#" class="social__link social__link--instagram">Instagram</a>
+      <a href="#" class="social__link social__link--facebook">Facebook</a>
+      <a href="#" class="social__link social__link--twitter">Twitter</a>
+    </div>
+    <div class="developer">
+      <a href="#" class="developer__link">Разработано HTMLAcademy</a>
+    </div>
+  </footer>
+
+  <div class="modal">
+    <h3 class="modal__title">Добавить в корзину</h3>
+    <span class="modal__text">Выберите размер:</span>
+    <label for="s">
+      <input type="radio" id="s" name="size">
+      S
+    </label>
+    <label for="m">
+      <input type="radio" id="m" name="size">
+      M
+    </label>
+    <label for="l">
+      <input type="radio" id="l" name="size">
+      L
+    </label>
+    <button class="btn">Добавить</button>
+  </div>
+</body>
+</html>
