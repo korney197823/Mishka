@@ -11,7 +11,7 @@
   <header class="page-header">
     <div class="top">
       <div class="logo">
-        <a href="index.html" class="logo__link"><img src="http://placehold.it/90x45" alt="Mishka" class="logo__img"></a>
+        <a href="index.html" class="logo__link"><img src="http://placehold.it/90x45" width="90" height="45" alt="Mishka" class="logo__img"></a>
       </div>
       <button class="btn-toggle" type="button">open/close</button>
     </div>
@@ -24,7 +24,7 @@
       </ul>
     </nav>
     <div class="promo">
-      <h2 class="promo__title">Вязание на заказ</h2>
+      <h1 class="promo__title">Вязание на заказ</h1>
       <p class="promo__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.</p>
     </div>
@@ -63,27 +63,24 @@
     </fieldset>
     <fieldset class="form-group">
       <legend>ФИО</legend>
-      <label for="name">Фамилия:</label>
-      <input type="text" name="name" id="name">
-      <label for="surname">Имя:</label>
-      <input type="text" name="surname" id="surname">
+      <label for="name">Имя:</label>
+      <input type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+      <label for="surname">Фамилия:</label>
+      <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
       <label for="middlename">Отчество:</label>
-      <input type="text" name="middlename" id="middlename">
+      <input type="text" name="middlename" id="middlename" placeholder="Отчество, если желаете">
     </fieldset>
     <fieldset class="form-group">
       <legend>Тел</legend>
-      <label for="phone"></label>
-      <input type="tel" name="phone" id="phone">
+      <input type="tel" name="phone" id="phone" placeholder="+7 XXX XX XX*" required>
     </fieldset>
     <fieldset class="form-group">
       <legend>E-mail</legend>
-      <label for="email"></label>
-      <input type="email" name="mail" id="email">
+      <input type="email" name="mail" id="email" placeholder="Ваш Email*" required>
     </fieldset>
     <fieldset class="form-group">
       <legend>Доп</legend>
-      <label for="extra"></label>
-      <textarea id="extra"></textarea>
+      <textarea id="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
     </fieldset>
     <span class="form__note">Поля обязательны для заполнения</span>
     <button class="btn" type="submit">Отправить заказ</button>

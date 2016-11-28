@@ -5,13 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=jkR58htH3wxCWrdG4Smjuswmzl3swGa1&amp;width=100%25&amp;height=457&amp;id=map&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
     <header class="page-header">
       <div class="top">
         <div class="logo">
-        <a class="logo__link"><img src="http://placehold.it/90x45" alt="Mishka" class="logo__img"></a>
+        <a class="logo__link"><img src="http://placehold.it/90x45" width="90" height="45" alt="Mishka" class="logo__img"></a>
         </div>
         <button class="btn-toggle" type="button">open/close</button>
       </div>
@@ -24,7 +25,7 @@
         </ul>
       </nav>
       <div class="promo">
-        <h2 class="promo__title">Милые штучки ручной работы для дома</h2>
+        <h1 class="promo__title">Милые штучки ручной работы для дома</h1>
         <a href="#" class="promo__link">Предметы интерьера</a>
         <a href="#" class="promo__link">Детские игрушки</a>
       </div>
@@ -32,7 +33,7 @@
 
     <main class="content">
       <section class="product-week">
-        <h3 class="product-week__title">Вязаные корзинки <i>Товар недели</i></h3>
+        <h2 class="product-week__title">Вязаные корзинки <i>Товар недели</i></h2>
         <p class="product-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="product-week__property">
           <tr>
@@ -49,43 +50,41 @@
           </tr>
         </table>
         <div class="product-week__img-wrap">
-          <img src="http://placehold.it/260x315" alt="Корзинки">
+          <img src="http://placehold.it/260x315" width="260" height="315" alt="Корзинки">
         </div>
         <span class="product-week__price">Цена: 990 руб.</span>
-        <a href="#" class="btn" type="button">Заказать</a>
+        <a href="#" class="btn">Заказать</a>
       </section>
 
       <section class="features">
-        <h3 class="features__title">Коротко о нас</h3>
-        <div class="feature">
+        <h2 class="features__title">Коротко о нас</h2>
+        <div class="feature feature--clean">
           <p class="feature__text">Экологически
             чистые материалы</p>
         </div>
-        <div class="feature">
+        <div class="feature feature--style">
           <p class="feature__text">Cкандинавский стиль
             по российской цене</p>
         </div>
-        <div class="feature">
+        <div class="feature feature--likes">
           <p class="feature__text">Увеличивает лайки
             на фотографиях</p>
         </div>
-        <div class="feature">
+        <div class="feature feature--handmade">
           <p class="feature__text">Связано вручную с
             любовью и умилением</p>
         </div>
-        <div class="feature">
+        <div class="feature feature--production">
           <p class="feature__text">Поддержка отечественного производителя</p>
         </div>
-        <div class="feature">
+        <div class="feature feature--pack">
           <p class="feature__text">Поставляется в
             подарочной упаковке</p>
         </div>
       </section>
 
       <section class="slider">
-        <h3 class="slider__title">Отзывы</h3>
-        <div class="slider__controls"></div>
-        <div class="slider__inner">
+        <h2 class="slider__title">Отзывы</h2>
           <div class="slider__slides">
             <div class="review">
               <p class="review__text">
@@ -96,19 +95,22 @@
               <span class="review__name">Анастасия Красильникова</span>
               <span class="review__mail">@misssssiskras</span>
             </div>
+            <div class="slider__controls">
+              <button class="btn" type="button">< Prev</button>
+              <button class="btn" type="button">Next ></button>
+            </div>
           </div>
-        </div>
-        <a href="#" class="btn" type="button">Написать</a>
+
+        <a href="#" class="btn">Написать</a>
       </section>
 
       <section class="contacts">
-        <h3 class="contacts__title">Контакты</h3>
+        <h2 class="contacts__title">Контакты</h2>
         <span class="contacts__name">email:</span>
         <span class="contacts__subject"><a href="mailto:info@mimimishkashop.ru" class="email">info@mimimishkashop.ru</a></span>
         <span class="contacts__name">Адрес:</span>
         <span class="contacts__subject">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
-        <div class="map">
-          <img src="http://placehold.it/320x460" alt="Map">
+        <div class="map" id="map">
         </div>
         <a href="#" class="btn" type="button">Напишите нам</a>
       </section>
@@ -126,21 +128,23 @@
     </footer>
 
     <div class="modal">
-      <h3 class="modal__title">Добавить в корзину</h3>
+      <h2 class="modal__title">Добавить в корзину</h2>
       <span class="modal__text">Выберите размер:</span>
-      <label for="s">
-        <input type="radio" id="s" name="size">
-        S
-      </label>
-      <label for="m">
-        <input type="radio" id="m" name="size">
-        M
-      </label>
-      <label for="l">
-        <input type="radio" id="l" name="size">
-        L
-      </label>
-      <button class="btn">Добавить</button>
+      <form class="modal-form">
+        <label for="s">
+          <input type="radio" id="s" name="size">
+          S
+        </label>
+        <label for="m">
+          <input type="radio" id="m" name="size">
+          M
+        </label>
+        <label for="l">
+          <input type="radio" id="l" name="size">
+          L
+        </label>
+        <button class="btn" type="submit">Добавить</button>
+      </form>
     </div>
   </body>
 </html>
