@@ -34,7 +34,7 @@
       <div class="product__img-wrap">
         <a href="#"><img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик" class="product__img"></a>
       </div>
-      <a href="#"><h2 class="product__title">Зайчик-попрыгайчик</h2></a>
+      <a href="#" class="product__title-link"><h2 class="product__title">Зайчик-попрыгайчик</h2></a>
       <p class="product__description">Рост 30см, вес 200 г</p>
       <span class="product__price">1200 руб.</span>
       <a href="#" class="product__add">Добавить в корзину</a>
@@ -43,7 +43,7 @@
       <div class="product__img-wrap">
         <a href="#"><img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка" class="product__img"></a>
       </div>
-      <a href="#"><h2 class="product__title">Корзинка для белья</h2></a>
+      <a href="#" class="product__title-link"><h2 class="product__title">Корзинка для белья</h2></a>
       <p class="product__description">Диаметр 15см, высота 10 см</p>
       <span class="product__price">690 руб.</span>
       <a href="#" class="product__add">Добавить в корзину</a>
@@ -52,7 +52,7 @@
       <div class="product__img-wrap">
         <a href="#"><img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка" class="product__img"></a>
       </div>
-      <a href="#"><h2 class="product__title">Большая корзинка
+      <a href="#" class="product__title-link"><h2 class="product__title">Большая корзинка
           для игрушек</h2></a>
       <p class="product__description">Диаметр 30см, высота 30см</p>
       <span class="product__price">1500 руб.</span>
@@ -72,12 +72,12 @@
 
   <footer class="page-footer">
     <div class="social">
-      <a href="#" class="social__link social__link--instagram">Instagram</a>
-      <a href="#" class="social__link social__link--facebook">Facebook</a>
-      <a href="#" class="social__link social__link--twitter">Twitter</a>
+      <a href="#" class="social-link social-link--instagram">Instagram</a>
+      <a href="#" class="social-link social-link--facebook">Facebook</a>
+      <a href="#" class="social-link social-link--twitter">Twitter</a>
     </div>
     <div class="developer">
-      <a href="#" class="developer__link">Разработано HTMLAcademy</a>
+      <a href="#" class="developer__link">Разработано</a>
     </div>
   </footer>
 
@@ -85,19 +85,20 @@
     <h2 class="modal__title">Добавить в корзину</h2>
     <form class="modal-form">
       <span class="modal__text">Выберите размер:</span>
-      <label for="s">
+      <div class="modal-form__radio-wrap"><label for="s">
         <input type="radio" id="s" name="size">
         S
       </label>
-      <label for="m">
-        <input type="radio" id="m" name="size">
-        M
-      </label>
-      <label for="l">
-        <input type="radio" id="l" name="size">
-        L
-      </label>
-      <button class="btn" type="submit">Добавить</button>
+        <label for="m">
+          <input type="radio" id="m" name="size">
+          M
+        </label>
+        <label for="l">
+          <input type="radio" id="l" name="size">
+          L
+        </label>
+      </div>
+      <button class="btn btn--modal" type="submit">Добавить</button>
     </form>
   </div>
 </body>
