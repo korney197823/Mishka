@@ -1,0 +1,39 @@
+.btn {
+  display: block;
+  width: 100%;
+  border: 2px solid #444444;
+  padding: 20px 0;
+  color: $textcolor;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: rem(17px);
+  font-weight: 700;
+  line-height: rem(16px);
+  background-color: #fff;
+  cursor: pointer;
+  &--slider {
+    width: 50%;
+    font-size: 0;
+    border: 1px solid #ececec;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+  }
+  &--slider-left {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+  &--slider-right {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+  &--modal {
+    background-color: $green-bg;
+    color: $lightextcolor;
+    border: none;
+  }
+}
+
+.btn-toggle {
+  position: absolute;
+  right: 5%;
+  bottom: 20px;
+}

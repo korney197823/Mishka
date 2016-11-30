@@ -1,0 +1,27 @@
+.slider {
+  padding: 25px 9.375%;
+}
+.slider__title {
+  color: $darktextcolor;
+  font-size: rem(25px);
+  font-weight: 700;
+  line-height: rem(30px);
+  margin-bottom: 30px;
+}
+.review__text {
+  line-height: rem(30px);
+  margin-bottom: 35px;
+}
+.review__name {
+  color: $darktextcolor;
+  font-weight: 700;
+  line-height: rem(24px);
+}
+.review__mail {
+  line-height: rem(30px);
+}
+.slider__controls {
+  display: flex;
+  margin-top: 35px;
+  margin-bottom: 38px;
+}
