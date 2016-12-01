@@ -1,0 +1,20 @@
+.production {
+  padding: 30px;
+  margin-bottom: 60px;
+}
+.production__title {
+  font-size: rem(17px);
+  font-family: $fontbold;
+  padding-left: 34.615384615%;
+  margin-bottom: 25px;
+}
+.production__text {
+  padding: 30px;
+  font-size: rem(13px);
+}
+.production__video-wrap {
+  img {
+  width: 100%;
+  height: auto;
+  }
+}

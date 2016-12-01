@@ -1,0 +1,27 @@
+.order-form {
+  padding: 30px 9.375%;
+}
+.order-form-group {
+  border: none;
+}
+.order-form__text {
+  font-size: rem(13px);
+}
+.order-form__label {
+  display: block;
+  font-family: $fontbold;
+  font-size: rem(17px);
+  line-height: rem(18px);
+}
+.order-form__legend {
+  font-family: $fontbold;
+  font-size: rem(17px);
+  line-height: rem(16px);
+  text-transform: uppercase;
+  color: $green-bg;
+
+}
+.order-form__note {
+  font-size: rem(14px);
+  line-height: rem(16px);
+}

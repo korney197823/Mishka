@@ -1,0 +1,42 @@
+.promo {
+  position: relative;
+  min-height: 490px;
+  padding-top: 70px;
+  background: #f1f1f1 url("../img/hero-mobile@1x.jpg") no-repeat center center;
+  background-size: cover;
+  &--catalog,
+  &--form {
+    min-height: 177px;
+    background-image: none;
+  }
+}
+.promo__title {
+  width: 76.25%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $fontbold;
+  font-weight: bold;
+  font-size: rem(27px);
+  line-height: rem(30px);
+}
+.promo__link-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+.promo__link {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 9.375%;
+  padding-right: 50%;
+  display: block;
+  background-color: $green-bg;
+  color: $lightextcolor;
+  font-size: rem(19px);
+  font-weight: 700;
+  &--toys {
+    background-color: $darkgreen-bg;
+  }
+}

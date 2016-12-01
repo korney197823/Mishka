@@ -1,0 +1,26 @@
+.product {
+  margin-bottom: 30px;
+  border: 1px solid #ededed;
+}
+.product__img-wrap {
+  text-align: center;
+}
+.product__title-link {
+  text-decoration: none;
+}
+.product__title {
+  color: $darktextcolor;
+  font-family: $fontbold;
+  font-size: rem(17px);
+}
+.product__description {
+  font-size: rem(13px);
+  line-height: rem(30px);
+}
+.product__price {
+  font-family: $fontbold;
+}
+.product__img {
+  width: 100%;
+  height: auto;
+}

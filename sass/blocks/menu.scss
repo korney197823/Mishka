@@ -1,0 +1,13 @@
+
+.menu__link {
+  display: block;
+  padding-top: rem(30px);
+  padding-bottom: rem(30px);
+  border-top: 1px solid #ececec;
+  text-align: center;
+  text-decoration: none;
+  font-family: $fontbold;
+  font-size: rem(17px);
+  font-weight: bold;
+  color: $darktextcolor;
+}
