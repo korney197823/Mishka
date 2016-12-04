@@ -24,7 +24,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-
+  @include tablet {
+    width: 86.97916666666666%;
+    display: flex;
+    left: 6.45%;
+  }
 }
 .promo__link {
   padding-top: 30px;
@@ -36,6 +40,12 @@
   color: $lightextcolor;
   font-size: rem(19px);
   font-weight: 700;
+  @include tablet {
+    padding-right: 30%;
+    width: 50%;
+    font-size: rem(20px);
+    line-height: rem(30px);
+  }
   &--toys {
     background-color: $darkgreen-bg;
   }

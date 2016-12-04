@@ -1,28 +1,70 @@
 .product-week {
-  padding-left: 9.375%;
-  padding-right: 9.375%;
   padding-top: 30px;
   padding-bottom: 35px;
+
+}
+.product-week__wrap {
+  position: relative;
 }
 .product-week__title {
+  display: flex;
+  flex-direction: column;
   text-align: left;
   color: $darktextcolor;
   font-family: $fontbold;
   font-size: rem(25px);
   font-weight: 700;
   line-height: rem(30px);
-  i {
-    color: $green-bg;
-    font-family: $font;
-    font-style: normal;
-    font-size: rem(17px);
-    font-weight: 700;
-    line-height: rem(16px);
-    text-transform: uppercase;
+  @include tablet {
+    font-size: rem(43px);
+    line-height: rem(50px);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include desktop {
+    position: absolute;
+    top: 55px;
+    left: 5%;
+    padding: 0 rem(35px);
+    flex-direction: row-reverse;
+    width: 75%;
+    justify-content: flex-end;
+    z-index: 2;
+    font-size: rem(53px);
+    line-height: rem(57px);
+  }
+}
+.product-week__title-slogan {
+  text-align: left;
+  color: $green-bg;
+  font-family: $font;
+  font-style: normal;
+  font-size: rem(17px);
+  font-weight: 700;
+  line-height: rem(16px);
+  text-transform: uppercase;
+  @include tablet {
+    width: rem(85px);
+    text-align: center;
+  }
+  @include desktop {
+    margin-right: rem(50px);
+  }
+}
+.product-week__description-wrap {
+  @include tablet {
+    position: relative;
+    padding-right: 56.287425149%;
+  }
+  @include desktop {
+    padding-left: 15%;
   }
 }
 .product-week__description {
   margin-top: 30px;
+  @include desktop {
+    padding-top: 150px;
+  }
 }
 .product-week__property {
   width: 100%;
@@ -33,9 +75,24 @@
   }
 }
 .product-week__img-wrap {
+  @include tablet {
+    position: absolute;
+    width: 50%;
+    margin: 0;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    min-height: 100%;
+    overflow: hidden;
+  }
   img {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
+    @include tablet {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 .product-week__price {

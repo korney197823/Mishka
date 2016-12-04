@@ -1,21 +1,52 @@
 .slider {
-  padding: 25px 9.375%;
+  padding: 25px 0;
+  @include tablet {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+  @include desktop {
+    position: relative;
+  }
+}
+.slider__wrap {
+  @include tablet {
+    position: relative;
+  }
+  @include desktop {
+    position: static;
+  }
 }
 .slider__title {
   color: $darktextcolor;
   font-size: rem(25px);
-  font-weight: 700;
+  font-family: $fontbold;
   line-height: rem(30px);
   margin-bottom: 30px;
+  @include tablet {
+    font-size: rem(43px);
+    line-height: rem(50px);
+  }
+  @include desktop {
+    font-size: rem(53px);
+    line-height: rem(57px);
+  }
 }
 .review__text {
+  font-size: rem(15px);
   line-height: rem(30px);
   margin-bottom: 35px;
+  @include tablet {
+    font-size: rem(17px);
+  }
 }
 .review__name {
   color: $darktextcolor;
-  font-weight: 700;
+  font-family: $fontbold;
+  font-size: rem(18px);
   line-height: rem(24px);
+  @include tablet {
+    font-size: rem(17px);
+  }
 }
 .review__mail {
   line-height: rem(30px);
@@ -24,4 +55,11 @@
   display: flex;
   margin-top: 35px;
   margin-bottom: 38px;
+  @include tablet {
+    margin: 0;
+    position: absolute;
+    width: 26.197760479041%;
+    bottom: 0;
+    right: 0;
+  }
 }

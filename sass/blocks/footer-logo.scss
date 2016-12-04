@@ -1,0 +1,12 @@
+.footer-logo {
+  display: none;
+  width: 88px;
+  height: 40px;
+  background-image: url("../img/logo-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 0;
+  @include tablet {
+    display: block;
+  }
+}

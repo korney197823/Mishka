@@ -1,9 +1,24 @@
 .features {
-  padding: 25px 9.375%;
+  padding: 25px 0;
+}
+.features__wrap {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .features__title {
   font-size: rem(25px);
   font-weight: 700;
   line-height: rem(30px);
   color: $darktextcolor;
+  @include tablet {
+    width: 100%;
+    font-size: rem(43px);
+    line-height: rem(50px);
+  }
+  @include desktop {
+    font-size: rem(53px);
+    line-height: rem(57px);
+  }
 }

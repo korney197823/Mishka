@@ -1,24 +1,57 @@
 .contacts {
-  padding: 40px 9.375%;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 40px 0;
+
+}
+.contacts__wrap {
+  @include desktop {
+    position: relative;
+    padding-right: 50%;
+  }
 }
 .contacts__title {
   width: 100%;
-
   margin-bottom: 40px;
   color: $darktextcolor;
   font-size: rem(18px);
-  font-weight: 700;
+  font-family: $fontbold;
   line-height: rem(30px);
+  @include tablet {
+    font-size: rem(43px);
+    line-height: rem(50px);
+  }
+  @include desktop {
+    font-size: rem(53px);
+    line-height: rem(57px);
+  }
+}
+.contacts__wrapper {
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    flex-wrap: wrap;
+  }
+}
+.contacts__email-wrap,
+.contacts__address-wrap {
+  display: flex;
+  font-size: rem(15px);
+  line-height: rem(30px);
+  @include tablet {
+    width: 50%;
+    font-size: rem(17px);
+  }
+  @include desktop {
+    width: 100%;
+  }
 }
 .contacts__name {
-  width: 14.0625%;
-  margin-right: 10%;
+  width: 24.375%;
 }
 .contacts__subject {
-  width: 55.625%;
+  width: 75.625%;
 }
 .contacts__email {
+
   color: $textcolor;
 }
