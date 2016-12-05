@@ -46,6 +46,11 @@
       top: 0;
     }
   }
+  &--order {
+    @include tablet {
+      width: 34.431137724%;
+    }
+  }
 }
 
 .btn-toggle {
