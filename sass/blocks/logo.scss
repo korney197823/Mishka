@@ -3,6 +3,11 @@
   @include tablet {
     position: absolute;
     left: 0;
+    top: 20px;
+  }
+  @include desktop {
+    left: calc(50% - 45px);
+    top: 20px;
   }
 }
 .logo__link {

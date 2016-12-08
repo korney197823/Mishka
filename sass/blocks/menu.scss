@@ -22,10 +22,17 @@
 }
 
 .menu__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &--catalog {
     @include tablet {
       order: 2;
       width: 25%;
+      @include desktop {
+        order: 0;
+        width: 17.52380952380952%;
+      }
     }
   }
   &--order {
@@ -33,12 +40,26 @@
       order: 3;
       width: 25%;
     }
+    @include desktop {
+      order: 1;
+      width: 19.04761904761905%;
+    }
   }
   &--new {
     display: none;
+    @include desktop {
+      display: block;
+      order: 5;
+      width: 17.52380952380952%;
+    }
   }
   &--sale {
     display: none;
+    @include desktop {
+      display: block;
+      order: 6;
+      width: 19.04761904761905%;
+    }
   }
   &--search {
     @include tablet {
@@ -47,12 +68,20 @@
       order: 0;
       border-left: 1px solid #ececec;
     }
+    @include desktop {
+      order: 3;
+      width: 7.904761904761905%;
+      margin-left: 26%;
+    }
   }
   &--cart {
     @include tablet {
       order: 1;
       flex-grow: 1;
       border-left: 1px solid #ececec;
+    }
+    @include desktop {
+      order: 4;
     }
   }
   &--shipping {
@@ -61,6 +90,9 @@
       display: block;
       order: 4;
       flex-grow: 1;
+    }
+    @include desktop {
+      order: 6;
     }
   }
 }
@@ -123,9 +155,33 @@
       font-size: rem(15px);
       background-color: transparent;
     }
+    @include desktop {
+      font-size: rem(17px);
+    }
   }
   &--order {
     @include tablet {
+      padding-left: 0;
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      background-color: transparent;
+      font-size: rem(15px);
+    }
+    @include desktop {
+      font-size: rem(17px);
+    }
+  }
+  &--sale {
+    @include desktop {
+      padding-left: 0;
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      background-color: transparent;
+      font-size: rem(15px);
+    }
+  }
+  &--new {
+    @include desktop {
       padding-left: 0;
       padding-top: rem(20px);
       padding-bottom: rem(20px);
