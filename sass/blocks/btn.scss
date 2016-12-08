@@ -51,6 +51,11 @@
       width: 34.431137724%;
     }
   }
+  &--catalog {
+    @include tablet {
+      order: 3;
+    }
+  }
 }
 
 .btn-toggle {
@@ -61,7 +66,11 @@
   background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  top: calc(50% - 7px);
   right: 5%;
   bottom: 20px;
   cursor: pointer;
+  @include tablet {
+    display: none;
+  }
 }

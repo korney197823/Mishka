@@ -1,23 +1,38 @@
 .promo {
   position: relative;
   min-height: 490px;
-  padding-top: 70px;
-  background: #f1f1f1 url("../img/hero-mobile@1x.jpg") no-repeat center center;
+  padding-top: rem(70px);
+  background: #f1f1f1 url("../img/hero-mobile@1x.jpg") no-repeat center top;
   background-size: cover;
+  border-bottom: 1px solid #e7e7e7;
+  @include tablet {
+    min-height: 750px;
+    padding-top: rem(155px);
+  }
   &--catalog,
   &--form {
     min-height: 177px;
     background-image: none;
+    @include tablet {
+      min-height: 224px;
+      padding-top: rem(103px);
+    }
   }
 }
 .promo__title {
-  width: 76.25%;
   margin: 0 auto;
   text-align: center;
   font-family: $fontbold;
   font-weight: bold;
   font-size: rem(27px);
   line-height: rem(30px);
+  @include tablet {
+    font-size: rem(43px);
+    line-height: rem(50px);
+    br {
+      display: none;
+    }
+  }
 }
 .promo__link-wrap {
   position: absolute;

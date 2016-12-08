@@ -1,11 +1,147 @@
+.menu {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  @include tablet {
 
+  }
+  &--close {
+    display: none;
+    @include tablet {
+      display: block;
+      position: static;
+    }
+  }
+}
+.menu__items {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.menu__item {
+  &--catalog {
+    @include tablet {
+      order: 2;
+      width: 25%;
+    }
+  }
+  &--order {
+    @include tablet {
+      order: 3;
+      width: 25%;
+    }
+  }
+  &--new {
+    display: none;
+  }
+  &--sale {
+    display: none;
+  }
+  &--search {
+    @include tablet {
+      width: 12.574850299%;
+      margin-left: 47.904191616%;
+      order: 0;
+      border-left: 1px solid #ececec;
+    }
+  }
+  &--cart {
+    @include tablet {
+      order: 1;
+      flex-grow: 1;
+      border-left: 1px solid #ececec;
+    }
+  }
+  &--shipping {
+    display: none;
+    @include tablet {
+      display: block;
+      order: 4;
+      flex-grow: 1;
+    }
+  }
+}
 .menu__link {
+  position: relative;
   display: block;
+  padding-top: rem(30px);
+  padding-bottom: rem(30px);
+  padding-left: 23.4375%;
+  background-color: #fff;
   border-top: 1px solid #ececec;
-  text-align: center;
   text-decoration: none;
   font-family: $fontbold;
   font-size: rem(17px);
   font-weight: bold;
   color: $darktextcolor;
+  @include tablet {
+    border-top: none;
+  }
+  &--search {
+    @include tablet {
+      font-size: 0;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 19px;
+      top: calc(50% - 10px);
+      left: 9.0625%;
+      background-image: url("../img/icon-search.svg");
+      background-repeat: no-repeat;
+      @include tablet {
+        left: calc(50% - 10px);
+      }
+    }
+  }
+  &--cart {
+    @include tablet {
+      text-align: right;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 19px;
+      top: calc(50% - 10px);
+      left: 9.0625%;
+      background-image: url("../img/icon-cart.svg");
+      background-repeat: no-repeat;
+
+    }
+  }
+  &--catalog {
+    @include tablet {
+      padding-left: 0;
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      text-align: left;
+      font-size: rem(15px);
+      background-color: transparent;
+    }
+  }
+  &--order {
+    @include tablet {
+      padding-left: 0;
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      background-color: transparent;
+      font-size: rem(15px);
+    }
+  }
+  &--shipping {
+    @include tablet {
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      background-color: transparent;
+      font-family: $font;
+      font-size: rem(15px);
+      line-height: rem(24px);
+      text-align: right;
+    }
+  }
 }
