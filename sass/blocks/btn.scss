@@ -58,19 +58,4 @@
   }
 }
 
-.btn-toggle {
-  position: absolute;
-  width: 20px;
-  height: 14px;
-  border: none;
-  background-image: url("../img/icon-menu-open.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  top: calc(50% - 7px);
-  right: 5%;
-  bottom: 20px;
-  cursor: pointer;
-  @include tablet {
-    display: none;
-  }
-}
+
