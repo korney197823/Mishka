@@ -1,14 +1,31 @@
 .social {
-  font-size: 0;
+  width: 54.23076923%;
+  min-height: 80px;
+  margin: 0 auto;
   display: flex;
-  padding: 20px;
-  justify-content: center;
-  border-bottom: 1px solid #e5e5e5;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0;
+  @include tablet {
+    width: 141px;
+    position: absolute;
+    left: calc(50% - 70px);
+  }
 }
 .social__link {
   display: block;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  background-color: $green-bg;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  &--instagram {
+    background-image: url("../img/icon-insta.svg");
+  }
+  &--facebook {
+    background-image: url("../img/icon-fb.svg");
+  }
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
 }

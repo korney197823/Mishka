@@ -3,7 +3,9 @@
 }
 .page-footer__wrap {
   @include tablet {
+    min-height: 143px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
