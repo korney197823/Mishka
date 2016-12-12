@@ -1,16 +1,10 @@
-.top {
+
+.top__wrap {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 80px;
-  @include tablet {
-    min-height: 90px;
-    margin-bottom: -64px;
-  }
-}
-.top__wrap {
-
   @include tablet {
     position: relative;
     display: flex;

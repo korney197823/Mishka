@@ -7,7 +7,7 @@
   border-bottom: 1px solid #e7e7e7;
   @include tablet {
     min-height: 750px;
-    padding-top: rem(155px);
+    padding-top: rem(45px);
   }
   &--catalog,
   &--form {
@@ -15,8 +15,14 @@
     background-image: none;
     @include tablet {
       min-height: 224px;
-      padding-top: rem(103px);
     }
+  }
+}
+.promo__shipping {
+  display: none;
+  @include tablet {
+    display: block;
+    text-align: right;
   }
 }
 .promo__title {
@@ -27,6 +33,7 @@
   font-size: rem(27px);
   line-height: rem(30px);
   @include tablet {
+    margin-top: 105px;
     font-size: rem(43px);
     line-height: rem(50px);
     br {

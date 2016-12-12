@@ -1,17 +1,18 @@
 .logo {
   text-align: center;
+  display: flex;
+  justify-content: center;
   @include tablet {
-    position: absolute;
-    left: 0;
-    top: 20px;
+    justify-content: flex-start;
   }
   @include desktop {
-    left: calc(50% - 45px);
-    top: 20px;
+    justify-content: center;
   }
 }
 .logo__link {
   display: block;
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
 }
 .logo__img {
   @include tablet {

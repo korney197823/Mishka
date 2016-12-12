@@ -1,11 +1,19 @@
 .menu {
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  width: 100%;
+  position: relative;
+  background-color: #fff;
+}
+.menu__items {
+  display: flex;
+  flex-wrap: wrap;
   @include tablet {
-
+    flex-wrap: nowrap;
   }
+}
+.menu__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &--close {
     display: none;
     @include tablet {
@@ -13,86 +21,85 @@
       position: static;
     }
   }
-}
-.menu__items {
-  @include tablet {
-    display: flex;
-    flex-wrap: wrap;
+  &--logo {
+    @include tablet {
+      width: 47.904191616%;
+    }
+    @include desktop {
+      width: 30.761904761%;
+      order: 2;
+    }
   }
-}
-
-.menu__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   &--catalog {
     @include tablet {
-      order: 2;
+      position: absolute;
       width: 25%;
+      bottom: -100%;
+      left: 0;
+      z-index: 1;
       @include desktop {
+        position: static;
         order: 0;
-        width: 17.52380952380952%;
+        width: 17.428571428%;
       }
     }
   }
   &--order {
     @include tablet {
-      order: 3;
+      position: absolute;
       width: 25%;
+      bottom: -100%;
+      left: 25%;
+      z-index: 1;
     }
     @include desktop {
+      position: static;
       order: 1;
-      width: 19.04761904761905%;
+      width: 18.476190476%;
+      padding-left: rem(36px);
+      border-left: 1px solid #ececec;
     }
   }
   &--new {
     display: none;
     @include desktop {
       display: block;
-      order: 5;
-      width: 17.52380952380952%;
+      position: absolute;
+      width: 20.857142857%;
+      bottom: -100%;
+      left: 0;
+      z-index: 2;
     }
   }
   &--sale {
     display: none;
     @include desktop {
       display: block;
-      order: 6;
-      width: 19.04761904761905%;
+      position: absolute;
+      width: 20.857142857%;
+      bottom: -100%;
+      left: 20.857142857%;
+      z-index: 2;
     }
   }
   &--search {
     @include tablet {
-      width: 12.574850299%;
-      margin-left: 47.904191616%;
-      order: 0;
+      width: 12.4251497%;
       border-left: 1px solid #ececec;
     }
     @include desktop {
       order: 3;
       width: 7.904761904761905%;
-      margin-left: 26%;
     }
   }
   &--cart {
     @include tablet {
-      order: 1;
-      flex-grow: 1;
+      width: 39.670658682%;
       border-left: 1px solid #ececec;
     }
     @include desktop {
       order: 4;
-    }
-  }
-  &--shipping {
-    display: none;
-    @include tablet {
-      display: block;
-      order: 4;
-      flex-grow: 1;
-    }
-    @include desktop {
-      order: 6;
+      width: 25.428571428%;
     }
   }
 }
@@ -209,7 +216,7 @@
   background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  top: calc(50% - 7px);
+  top: calc(40px - 7px);
   right: 5%;
   bottom: 20px;
   cursor: pointer;
