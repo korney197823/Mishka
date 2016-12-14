@@ -8,7 +8,6 @@
   font-size: 0;
   @include tablet {
     width: 141px;
-    position: absolute;
     left: calc(50% - 70px);
   }
 }
