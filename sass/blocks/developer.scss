@@ -1,9 +1,38 @@
+.developer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 81px;
+  border-top: 1px solid #e5e5e5;
+  @include tablet {
+    width: 182px;
+  }
+}
 .developer__link {
+  position: relative;
   display: block;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 15%;
+  text-align: left;
   color: $darktextcolor;
+  font-family: $fontbold;
   font-size: rem(19px);
-  font-weight: 700;
   line-height: rem(18px);
+  @include tablet {
+    padding: 0 rem(56px) 0 0;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    width: 27px;
+    height: 34px;
+    top: calc(50% - 17px);
+    right: 15%;
+    background-image: url(../img/htmlacademy.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @include tablet {
+      right: 0;
+    }
+  }
 }

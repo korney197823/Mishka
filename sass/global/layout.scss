@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 16px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -28,4 +28,33 @@ ul {
 }
 a {
   text-decoration: none;
+}
+.container {
+  width: auto;
+  padding: 0 30px;
+  @include tablet {
+    width: 87.23958333%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  @include desktop {
+    width: 1050px;
+  }
+}
+.clearfix {
+&::after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

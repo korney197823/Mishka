@@ -1,9 +1,102 @@
 .feature {
+  position: relative;
   margin-top: 25px;
   padding-top: 55px;
+  @include tablet {
+    width: 48%;
+    &:nth-of-type(odd) {
+      margin-right: 2%;
+    }
+  }
+  &--clean {
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: rem(34px);
+      height: rem(40px);
+      background-image: url("../img/icon-feature-1.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &--style {
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: rem(34px);
+      height: rem(40px);
+      background-image: url("../img/icon-feature-3.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      fill: $green-bg;
+    }
+  }
+  &--likes {
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: rem(34px);
+      height: rem(40px);
+      background-image: url("../img/icon-feature-5.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      fill: $green-bg;
+    }
+  }
+  &--handmade {
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: rem(34px);
+      height: rem(40px);
+      background-image: url("../img/icon-feature-2.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      fill: $green-bg;
+    }
+  }
+  &--production {
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: rem(46px);
+      height: rem(40px);
+      background-image: url("../img/icon-feature-4.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      fill: $green-bg;
+    }
+  }
+  &--pack {
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: rem(34px);
+      height: rem(40px);
+      background-image: url("../img/icon-feature-6.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      fill: $green-bg;
+    }
+  }
 }
 .feature__text {
   color: $darktextcolor;
   font-size: rem(17px);
   font-weight: 700;
+  @include tablet {
+    font-size: rem(20px);
+  }
 }

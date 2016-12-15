@@ -18,6 +18,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
+    @include tablet {
+      border: none;
+    }
   }
   &--slider-left {
     background-image: url("../img/icon-left-arrow.svg");
@@ -30,10 +33,29 @@
     color: $lightextcolor;
     border: none;
   }
+  &--contacts {
+    @include desktop {
+      width: 230px;
+    }
+  }
+  &--review {
+    @include tablet {
+      position: absolute;
+      width: 26.197760479041%;
+      right: 0;
+      top: 0;
+    }
+  }
+  &--order {
+    @include tablet {
+      width: 34.431137724%;
+    }
+  }
+  &--catalog {
+    @include tablet {
+      order: 3;
+    }
+  }
 }
 
-.btn-toggle {
-  position: absolute;
-  right: 5%;
-  bottom: 20px;
-}
+

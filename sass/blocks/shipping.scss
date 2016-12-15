@@ -1,0 +1,13 @@
+.shipping {
+  display: none;
+  @include tablet {
+    display: block;
+    //position: absolute;
+    //right: 0;
+    //top: 100%;
+    padding-top: rem(20px);
+    z-index: 1;
+    font-size: rem(15px);
+    line-height: rem(24px);
+  }
+}

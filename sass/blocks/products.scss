@@ -1,3 +1,7 @@
-.products {
-  padding: 30px 9.375% 0;
+.products__wrap {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

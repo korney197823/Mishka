@@ -1,4 +1,11 @@
 .page-footer {
-  padding: 0 30px;
   background-color: #f1f1f1;
+}
+.page-footer__wrap {
+  @include tablet {
+    min-height: 143px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

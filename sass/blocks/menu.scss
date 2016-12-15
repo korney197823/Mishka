@@ -1,13 +1,230 @@
-
+.menu {
+  position: relative;
+  min-height: 80px;
+  background-color: #fff;
+  @include tablet {
+    min-height: 90px;
+  }
+}
+.menu__items {
+  display: flex;
+  flex-wrap: wrap;
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+}
+.menu__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &--close {
+    display: none;
+    @include tablet {
+      display: block;
+      position: static;
+    }
+  }
+  &--logo {
+    @include tablet {
+      width: 47.904191616%;
+    }
+    @include desktop {
+      width: 30.761904761%;
+      order: 2;
+    }
+  }
+  &--catalog {
+    @include tablet {
+      position: absolute;
+      width: 25%;
+      bottom: -72%;
+      left: 0;
+      z-index: 1;
+      @include desktop {
+        position: static;
+        order: 0;
+        width: 17.428571428%;
+      }
+    }
+  }
+  &--order {
+    @include tablet {
+      position: absolute;
+      width: 25%;
+      bottom: -72%;
+      left: 25%;
+      z-index: 1;
+    }
+    @include desktop {
+      position: static;
+      order: 1;
+      width: 18.476190476%;
+      padding-left: rem(36px);
+      border-left: 1px solid #ececec;
+    }
+  }
+  &--new {
+    display: none;
+    @include desktop {
+      display: block;
+      position: absolute;
+      width: 20.857142857%;
+      bottom: -72%;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  &--sale {
+    display: none;
+    @include desktop {
+      display: block;
+      position: absolute;
+      width: 20.857142857%;
+      bottom: -72%;
+      left: 20.857142857%;
+      z-index: 2;
+    }
+  }
+  &--search {
+    @include tablet {
+      width: 12.4251497%;
+      border-left: 1px solid #ececec;
+    }
+    @include desktop {
+      order: 3;
+      width: 7.904761904761905%;
+    }
+  }
+  &--cart {
+    @include tablet {
+      width: 39.670658682%;
+      border-left: 1px solid #ececec;
+    }
+    @include desktop {
+      order: 4;
+      width: 25.428571428%;
+    }
+  }
+}
 .menu__link {
+  position: relative;
   display: block;
   padding-top: rem(30px);
   padding-bottom: rem(30px);
+  padding-left: 23.4375%;
+  background-color: #fff;
   border-top: 1px solid #ececec;
-  text-align: center;
   text-decoration: none;
   font-family: $fontbold;
   font-size: rem(17px);
   font-weight: bold;
   color: $darktextcolor;
+  @include tablet {
+    border-top: none;
+  }
+  &--search {
+    @include tablet {
+      font-size: 0;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 19px;
+      top: calc(50% - 10px);
+      left: 9.0625%;
+      background-image: url("../img/icon-search.svg");
+      background-repeat: no-repeat;
+      @include tablet {
+        left: calc(50% - 10px);
+      }
+    }
+  }
+  &--cart {
+    @include tablet {
+      text-align: right;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 19px;
+      top: calc(50% - 10px);
+      left: 9.0625%;
+      background-image: url("../img/icon-cart.svg");
+      background-repeat: no-repeat;
+
+    }
+  }
+  &--catalog {
+    @include tablet {
+      padding-left: 0;
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      text-align: left;
+      font-size: rem(15px);
+      background-color: transparent;
+    }
+    @include desktop {
+      font-size: rem(17px);
+    }
+  }
+  &--order {
+    @include tablet {
+      padding-left: 0;
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      background-color: transparent;
+      font-size: rem(15px);
+    }
+    @include desktop {
+      font-size: rem(17px);
+    }
+  }
+  &--sale {
+    @include desktop {
+      padding-left: 0;
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      background-color: transparent;
+      font-size: rem(15px);
+    }
+  }
+  &--new {
+    @include desktop {
+      padding-left: 0;
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      background-color: transparent;
+      font-size: rem(15px);
+    }
+  }
+  &--shipping {
+    @include tablet {
+      padding-top: rem(20px);
+      padding-bottom: rem(20px);
+      background-color: transparent;
+      font-family: $font;
+      font-size: rem(15px);
+      line-height: rem(24px);
+      text-align: right;
+    }
+  }
+}
+.menu__toggle {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  border: none;
+  background-image: url("../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: calc(40px - 7px);
+  right: 5%;
+  bottom: 20px;
+  cursor: pointer;
+  @include tablet {
+    display: none;
+  }
 }
