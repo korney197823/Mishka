@@ -286,12 +286,12 @@ select { /* 1 */
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 
-button,
-html [type="button"], /* 1 */
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-}
+//button,
+//html [type="button"], /* 1 */
+//[type="reset"],
+//[type="submit"] {
+//  -webkit-appearance: button; /* 2 */
+//}
 
 /**
  * Remove the inner border and padding in Firefox.

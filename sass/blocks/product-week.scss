@@ -1,7 +1,10 @@
 .product-week {
   padding-top: 30px;
   padding-bottom: 35px;
-
+  @include tablet {
+    padding-top: 46px;
+    padding-bottom: 70px;
+  }
 }
 .product-week__wrap {
   position: relative;
@@ -9,12 +12,13 @@
 .product-week__title {
   display: flex;
   flex-direction: column;
+  margin-right: -10px;
   text-align: left;
   color: $darktextcolor;
   font-family: $fontbold;
   font-size: rem(25px);
-  font-weight: 700;
   line-height: rem(30px);
+
   @include tablet {
     font-size: rem(43px);
     line-height: rem(50px);
@@ -35,16 +39,19 @@
   }
 }
 .product-week__title-slogan {
+  margin-top: 4px;
   text-align: left;
   color: $green-bg;
-  font-family: $font;
+  font-family: $fontbold;
   font-style: normal;
   font-size: rem(17px);
-  font-weight: 700;
   line-height: rem(16px);
   text-transform: uppercase;
   @include tablet {
     width: rem(85px);
+    display: inline-block;
+    margin-right: 31px;
+    margin-top: 13px;
     text-align: center;
   }
   @include desktop {
@@ -52,7 +59,9 @@
   }
 }
 .product-week__description-wrap {
+  margin-top: 28px;
   @include tablet {
+    margin-top: 49px;
     position: relative;
     padding-right: 56.287425149%;
   }
@@ -61,20 +70,38 @@
   }
 }
 .product-week__description {
-  margin-top: 30px;
+  font-size: rem(15px);
+  line-height: rem(24px);
+  @include tablet {
+    font-size: rem(17px);
+    line-height: rem(30px);
+  }
   @include desktop {
     padding-top: 150px;
   }
 }
 .product-week__property {
   width: 100%;
-  margin-top: 30px;
-  padding: rem(10px) 0;
+  margin-top: 15px;
+  font-size: rem(15px);
+  line-height: rem(20px);
+  @include tablet {
+    margin-top: 32px;
+  }
   td {
+    padding-top: 9px;
+    padding-bottom: 9px;
     border-bottom: 1px solid #ececec;
+    &:last-child {
+      padding-left: 6.92%;
+      @include tablet {
+        padding-left: 0;
+      }
+    }
   }
 }
 .product-week__img-wrap {
+  margin-top: 26px;
   @include tablet {
     position: absolute;
     width: 50%;
@@ -97,9 +124,14 @@
 }
 .product-week__price {
   display: block;
-  margin: 25px 0;
+  margin: 26px 0;
   text-align: center;
   font-size: rem(17px);
-  font-weight: 700;
+  font-family: $fontbold;
   line-height: rem(24px);
+  @include tablet {
+    margin-top: 55px;
+    margin-bottom: 35px;
+    font-size: rem(20px);
+  }
 }

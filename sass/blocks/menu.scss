@@ -1,14 +1,22 @@
 .menu {
   position: relative;
-  min-height: 80px;
   background-color: #fff;
   @include tablet {
-    min-height: 90px;
+
   }
 }
 .menu__items {
+  min-height: 80px;
   display: flex;
   flex-wrap: wrap;
+  &--close {
+    display: none;
+    @include tablet {
+      min-height: 90px;
+      display: flex;
+      position: static;
+    }
+  }
   @include tablet {
     flex-wrap: nowrap;
   }
@@ -18,13 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  &--close {
-    display: none;
-    @include tablet {
-      display: block;
-      position: static;
-    }
-  }
+
   &--logo {
     @include tablet {
       width: 47.904191616%;
@@ -38,7 +40,7 @@
     @include tablet {
       position: absolute;
       width: 25%;
-      bottom: -72%;
+      bottom: -70%;
       left: 0;
       z-index: 1;
       @include desktop {
@@ -52,7 +54,7 @@
     @include tablet {
       position: absolute;
       width: 25%;
-      bottom: -72%;
+      bottom: -70%;
       left: 25%;
       z-index: 1;
     }
@@ -132,7 +134,7 @@
       content: '';
       width: 18px;
       height: 19px;
-      top: calc(50% - 10px);
+      top: calc(50% - 6px);
       left: 9.0625%;
       background-image: url("../img/icon-search.svg");
       background-repeat: no-repeat;
@@ -151,7 +153,7 @@
       width: 20px;
       height: 19px;
       top: calc(50% - 10px);
-      left: 9.0625%;
+      left: 13%;
       background-image: url("../img/icon-cart.svg");
       background-repeat: no-repeat;
 

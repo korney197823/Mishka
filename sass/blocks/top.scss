@@ -10,5 +10,11 @@
   @include tablet {
     position: relative;
     display: flex;
+    width: 668px;;
+    margin: 0 auto;
+    padding: 0;
+  }
+  @include desktop {
+    width: 1050px;
   }
 }

@@ -2,12 +2,12 @@
   display: block;
   width: 100%;
   border: 2px solid #444444;
-  padding: 20px 0;
+  padding: rem(16px) 0;
   color: $textcolor;
   text-align: center;
   text-transform: uppercase;
+  font-family: $fontbold;
   font-size: rem(17px);
-  font-weight: 700;
   line-height: rem(16px);
   background-color: #fff;
   cursor: pointer;
@@ -34,6 +34,10 @@
     border: none;
   }
   &--contacts {
+    @include tablet {
+      margin: 0 auto;
+      width: 230px;
+    }
     @include desktop {
       width: 230px;
     }

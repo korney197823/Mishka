@@ -1,5 +1,5 @@
 .social {
-  width: 54.23076923%;
+  width: 141px;
   min-height: 80px;
   margin: 0 auto;
   display: flex;
@@ -8,23 +8,28 @@
   font-size: 0;
   @include tablet {
     width: 141px;
+    position: absolute;
     left: calc(50% - 70px);
   }
 }
 .social__link {
   display: block;
-  width: 30px;
-  height: 30px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   &--instagram {
+    width: 22px;
+    height: 22px;
     background-image: url("../img/icon-insta.svg");
   }
   &--facebook {
+    width: 15px;
+    height: 29px;
     background-image: url("../img/icon-fb.svg");
   }
   &--twitter {
+    width: 24px;
+    height: 20px;
     background-image: url("../img/icon-twitter.svg");
   }
 }

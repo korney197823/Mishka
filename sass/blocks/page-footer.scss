@@ -3,6 +3,7 @@
 }
 .page-footer__wrap {
   @include tablet {
+    position: relative;
     min-height: 143px;
     display: flex;
     justify-content: space-between;

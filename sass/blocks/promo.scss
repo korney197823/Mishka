@@ -8,7 +8,7 @@
   }
 }
 .promo__wrap {
-  min-height: 490px;
+  min-height: 487px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,9 +16,9 @@
   margin-right: -30px;
   padding-top: rem(70px);
   @include tablet {
-    min-height: 750px;
+    min-height: 746px;
     margin: 0 auto;
-    padding-top: rem(20px);
+    padding-top: rem(19px);
   }
   &--catalog,
   &--form {
@@ -38,6 +38,8 @@
 .promo__shipping {
   display: none;
   @include tablet {
+    font-size: rem(15px);
+    line-height: rem(24px);
     display: block;
     text-align: right;
   }
@@ -46,12 +48,12 @@
   margin: 0 auto;
   text-align: center;
   font-family: $fontbold;
-  font-weight: bold;
   font-size: rem(27px);
   line-height: rem(30px);
   @include tablet {
     font-size: rem(43px);
     line-height: rem(50px);
+    margin-bottom: 269px;
     br {
       display: none;
     }
@@ -65,22 +67,58 @@
   }
 }
 .promo__link {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 9.375%;
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 28px;
+  padding-left: 30px;
   padding-right: 50%;
   display: block;
   background-color: $green-bg;
   color: $lightextcolor;
   font-size: rem(19px);
-  font-weight: 700;
+  font-family: $fontbold;
+  line-height: rem(24px);
   @include tablet {
+    padding-top: 29px;
     padding-right: 30%;
+    padding-left: 37px;
     width: 50%;
     font-size: rem(20px);
     line-height: rem(30px);
   }
+  &--interior,
+  &--toys {
+    &:after {
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+    }
+  }
+  &--interior {
+    &:after {
+      width: 41px;
+      height: 62px;
+      top: 23px;
+      right: 7%;
+      background-image: url(../img/icon-interior.svg);
+      @include tablet {
+        top: 29px;
+        right: 11%;
+      }
+    }
+  }
   &--toys {
     background-color: $darkgreen-bg;
+    &:after {
+      width: 61px;
+      height: 62px;
+      top: 20px;
+      right: 4%;
+      background-image: url(../img/icon-toy.svg);
+      @include tablet {
+        top: 30px;
+        right: 10%;
+      }
+    }
   }
 }

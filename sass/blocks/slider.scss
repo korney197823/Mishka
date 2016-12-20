@@ -1,6 +1,9 @@
 .slider {
-  padding: 25px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
   @include tablet {
+    padding-top: 78px;
+    margin-bottom: 82px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
   }
@@ -21,8 +24,9 @@
   font-size: rem(25px);
   font-family: $fontbold;
   line-height: rem(30px);
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   @include tablet {
+    margin-bottom: 49px;
     font-size: rem(43px);
     line-height: rem(50px);
   }
@@ -34,8 +38,9 @@
 .review__text {
   font-size: rem(15px);
   line-height: rem(30px);
-  margin-bottom: 35px;
+  margin-bottom: 26px;
   @include tablet {
+    margin-bottom: 57px;
     font-size: rem(17px);
   }
 }
@@ -49,17 +54,24 @@
   }
 }
 .review__mail {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: rem(18px);
   line-height: rem(30px);
+  @include tablet {
+    display: block;
+    font-size: rem(17px);
+  }
 }
 .slider__controls {
   display: flex;
-  margin-top: 35px;
+  margin-top: 32px;
   margin-bottom: 38px;
   @include tablet {
     margin: 0;
     position: absolute;
     width: 26.197760479041%;
-    bottom: 0;
+    bottom: 4px;
     right: 0;
   }
 }
