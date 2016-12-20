@@ -58,6 +58,12 @@
       display: none;
     }
   }
+  @include desktop {
+    width: 75%;
+    margin-bottom: 250px;
+    font-size: rem(53px);
+    line-height: rem(57px);
+  }
 }
 .promo__link-wrap {
   display: flex;
@@ -105,6 +111,9 @@
         top: 29px;
         right: 11%;
       }
+      @include desktop {
+        right: 7%;
+      }
     }
   }
   &--toys {
@@ -118,6 +127,9 @@
       @include tablet {
         top: 30px;
         right: 10%;
+      }
+      @include desktop {
+        right: 6.5%;
       }
     }
   }

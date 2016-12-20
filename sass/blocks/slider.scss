@@ -8,7 +8,8 @@
     background-repeat: no-repeat;
   }
   @include desktop {
-    position: relative;
+    padding: 0;
+    background-image: none;
   }
 }
 .slider__wrap {
@@ -16,7 +17,11 @@
     position: relative;
   }
   @include desktop {
-    position: static;
+    padding-top: 69px;
+    padding-bottom: 95px;
+    padding-left: 172px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
   }
 }
 .slider__title {
@@ -42,6 +47,9 @@
   @include tablet {
     margin-bottom: 57px;
     font-size: rem(17px);
+  }
+  @include desktop {
+    margin-bottom: 40px;
   }
 }
 .review__name {
@@ -73,5 +81,10 @@
     width: 26.197760479041%;
     bottom: 4px;
     right: 0;
+  }
+  @include desktop {
+    width: 16.5%;
+    bottom: 5px;
+    right: 3px;
   }
 }

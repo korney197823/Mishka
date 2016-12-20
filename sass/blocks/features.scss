@@ -4,11 +4,19 @@
     padding-top: 48px;
     padding-bottom: 82px;
   }
+  @include desktop {
+    padding-top: 58px;
+    padding-bottom: 95px;
+  }
 }
 .features__wrap {
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+  }
+  @include desktop {
+    padding-left: 172px;
+    padding-right: 172px;
   }
 }
 .features__title {

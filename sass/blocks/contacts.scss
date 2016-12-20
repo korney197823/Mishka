@@ -7,7 +7,8 @@
   @include desktop {
     position: relative;
     width: 1050px;
-    padding-left: 175px;
+    padding-top: 80px;
+    padding-left: 172px;
     padding-bottom: 0;
     margin: 0 auto;
     margin-bottom: 105px;
@@ -15,8 +16,9 @@
 }
 .contacts__wrap {
   @include desktop {
-    width: 50%;
+    width: 40%;
     float: left;
+    padding-top: 70px;
     padding-right: 50px;
   }
 }
@@ -48,6 +50,9 @@
       background-repeat: no-repeat;
       background-image: url(../img/icon-flag.svg);
     }
+    @include desktop {
+      left: -36%;
+    }
   }
 }
 .contacts__wrapper {
@@ -77,6 +82,10 @@
     margin-top: 0;
     margin-left: 55px;
   }
+  @include desktop {
+    margin-top: 30px;
+    margin-left: 0;
+  }
 }
 .contacts__name {
   width: 33.375%;
@@ -90,6 +99,7 @@
 .contacts__btn-wrap {
   @include desktop {
     position: absolute;
+    width: 233px;
     bottom: 0;
   }
 }
