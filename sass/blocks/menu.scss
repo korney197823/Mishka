@@ -1,5 +1,6 @@
 .menu {
   position: relative;
+  min-height: 80px;
   background-color: #fff;
   @include tablet {
 
