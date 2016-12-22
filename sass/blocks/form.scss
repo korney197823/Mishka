@@ -42,7 +42,7 @@ input[type="email"] {
   width: 100%;
   border: none;
   border-bottom: 2px solid #000000;
-  padding: 15px 0;
+  padding: 15px 40px 15px 0;
 }
 input[name="phone"],
 input[name="mail"],
@@ -69,6 +69,32 @@ textarea[name="extra"] {
     @include tablet {
       display: flex;
       flex-wrap: wrap;
+    }
+  }
+  &--tel {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 24px;
+      background-image: url(../img/icon-phone.svg);
+      background-repeat: no-repeat;
+      top: 9px;
+      right: 8px;
+    }
+  }
+  &--email {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 33px;
+      height: 26px;
+      background-image: url(../img/icon-mail.svg);
+      background-repeat: no-repeat;
+      top: 10px;
+      right: 3px;
     }
   }
 }
@@ -188,10 +214,10 @@ textarea[name="extra"] {
 
 .order-form__input {
   &--tel {
-    padding-right: 40px;
+
   }
   &--email {
-    padding-right: 40px;
+
   }
   &--name {
     @include tablet {
