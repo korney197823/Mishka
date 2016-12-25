@@ -27,13 +27,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   &--logo {
     @include tablet {
       width: 47.904191616%;
     }
     @include desktop {
-      width: 30.761904761%;
+      width: 322px;
       order: 2;
     }
   }
@@ -47,7 +46,7 @@
       @include desktop {
         position: static;
         order: 0;
-        width: 17.428571428%;
+        width: 183px;
       }
     }
   }
@@ -63,7 +62,7 @@
       position: static;
       order: 1;
       width: 18.476190476%;
-      padding-left: rem(36px);
+      padding-left: rem(33px);
       border-left: 1px solid #ececec;
     }
   }
@@ -157,7 +156,10 @@
       left: 13%;
       background-image: url("../img/icon-cart.svg");
       background-repeat: no-repeat;
-
+      @include desktop {
+        top: calc(50% - 7px);
+        left: 12%;
+      }
     }
   }
   &--catalog {

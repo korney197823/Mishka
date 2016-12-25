@@ -68,6 +68,9 @@
     @include tablet {
       margin-bottom: 83px;
     }
+    @include desktop {
+      margin-bottom: 102px;
+    }
   }
 }
 .promo__link-wrap {
