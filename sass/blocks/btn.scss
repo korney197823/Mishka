@@ -66,8 +66,14 @@
     }
   }
   &--catalog {
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 74%;
     @include tablet {
       order: 3;
+      margin-top: 36px;
+      width: 88%;
     }
   }
 }

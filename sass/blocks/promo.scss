@@ -64,7 +64,8 @@
     font-size: rem(53px);
     line-height: rem(57px);
   }
-  &--form {
+  &--form,
+  &--catalog{
     @include tablet {
       margin-bottom: 83px;
     }

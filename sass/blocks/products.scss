@@ -1,4 +1,8 @@
 .products__wrap {
+  padding-top: 30px;
+  @include tablet {
+    padding-top: 78px;
+  }
   @include desktop {
     display: flex;
     flex-direction: row;
