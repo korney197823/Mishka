@@ -1,29 +1,84 @@
 .order-form {
   padding-top: 22px;
   padding-bottom: 54px;
+  @include tablet {
+    padding-top: 71px;
+    padding-bottom: 50px;
+  }
+}
+.order-form__group-wrap {
+  &--checkbox {
+    @include tablet {
+      display: flex;
+    }
+  }
+  &--tel {
+    @include tablet {
+      padding-top: 53px;
+      padding-bottom: 16px;
+    }
+  }
 }
 .order-form__group {
   margin-bottom: 5px;
   @include tablet {
-    padding: 50px 0;
     display: flex;
   }
   &--radio {
-    margin-bottom: 23px
+    margin-bottom: 23px;
+    @include tablet {
+      margin-bottom: 26px;
+    }
+  }
+  &--checkbox {
+    @include tablet {
+      margin-bottom: 0;
+      padding-top: 50px;
+      padding-bottom: 27px;
+      background-color: #f1f1f1;
+    }
   }
   &--name {
     margin-bottom: 34px;
+    @include tablet {
+      margin-bottom: 25px;
+      padding-top: 52px;
+    }
+  }
+  &--contacts {
+    @include tablet {
+      margin-bottom: 0;
+      background-color: #f1f1f1;
+    }
   }
   &--tel {
     margin-bottom: 30px;
+    @include tablet {
+      align-items: baseline;
+      margin-bottom: 25px;
+    }
   }
   &--email {
     margin-bottom: 32px;
+    @include tablet {
+      align-items: baseline;
+    }
+  }
+  &--extra {
+    @include tablet {
+      margin-bottom: 0;
+      padding-top: 50px;
+    }
   }
 }
 .order-form__text {
   margin-bottom: 25px;
   font-size: rem(13px);
+  @include tablet {
+    margin-bottom: 58px;
+    font-size: rem(17px);
+    line-height: rem(30px);
+  }
 }
 input[type="radio"],
 input[type="checkbox"]{
@@ -32,8 +87,14 @@ input[type="checkbox"]{
 input {
   outline: none;
   @include placeholder {
+    font-family: $font;
     font-size: rem(17px);
     line-height: rem(18px);
+  }
+  @include tablet {
+    @include placeholder {
+      font-size: rem(19px);
+    }
   }
 }
 input[type="text"],
@@ -43,6 +104,9 @@ input[type="email"] {
   border: none;
   border-bottom: 2px solid #000000;
   padding: 15px 40px 15px 0;
+  @include tablet {
+    padding-left: 15px;
+  }
 }
 input[name="phone"],
 input[name="mail"],
@@ -51,24 +115,39 @@ textarea[name="extra"] {
     width: 100%;
   }
 }
+input[name="phone"],
+input[name="mail"] {
+  @include tablet {
+    background-color: #f1f1f1;
+  }
+}
 textarea[name="extra"] {
   width: 100%;
   min-height: 143px;
   padding: 17px;
   border: 2px solid #000000;
   outline: none;
+  font-family: $font;
   font-size: rem(17px);
   line-height: rem(18px);
+  @include tablet {
+    margin: 0;
+    padding: 15px;
+    @include placeholder {
+      font-size: rem(19px);
+    }
+  }
 }
 .order-form__label-wrap {
   @include tablet {
-    width: 78.15625%;
+    width: 500px;
   }
   &--checkbox {
     margin-bottom: 33px;
     @include tablet {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 0;
     }
   }
   &--tel {
@@ -82,6 +161,9 @@ textarea[name="extra"] {
       background-repeat: no-repeat;
       top: 9px;
       right: 8px;
+      @include tablet {
+        right: 25px;
+      }
     }
   }
   &--email {
@@ -95,6 +177,9 @@ textarea[name="extra"] {
       background-repeat: no-repeat;
       top: 10px;
       right: 3px;
+      @include tablet {
+        right: 20px;
+      }
     }
   }
 }
@@ -107,7 +192,8 @@ textarea[name="extra"] {
   text-transform: uppercase;
   color: $green-bg;
   @include tablet {
-    width: 21.84375%;
+    margin-right: 10px;
+    width: 158px;
   }
   &:after {
     position: absolute;
@@ -117,12 +203,29 @@ textarea[name="extra"] {
     background-color: $green-bg;
     top: 8px;
     right: 0;
+    @include tablet {
+      display: none;
+    }
+  }
+  &--radio {
+    @include tablet {
+      margin-top: 17px;
+    }
+  }
+  &--checkbox {
+    @include tablet {
+      margin-top: 18px;
+    }
   }
   &--name {
     margin-bottom: 27px;
+    @include tablet {
+      margin-top: 15px;
+    }
   }
   &--tel {
     margin-bottom: 8px;
+
   }
   &--email {
     margin-bottom: 10px;
@@ -130,19 +233,34 @@ textarea[name="extra"] {
       width: 68.84615384615%;
     }
   }
+  &--extra {
+    @include tablet {
+      margin-top: 19px;
+    }
+  }
 }
 .order-form__label {
   position: relative;
   display: block;
+  margin-bottom: 12px;
+  padding-left: 63px;
+  padding-top: 12px;
   font-family: $fontbold;
   font-size: rem(17px);
   line-height: rem(18px);
-  padding-left: 63px;
-  padding-top: 12px;
-  margin-bottom: 12px;
+  @include tablet {
+    margin-bottom: 24px;
+    padding-left: 80px;
+    padding-top: 16px;
+    font-size: rem(19px);
+    line-height: rem(18px);
+  }
   &--radio {
     min-height: 48px;
     cursor: pointer;
+    @include tablet {
+      min-height: 52px;
+    }
     &:before {
       position: absolute;
       content: '';
@@ -152,6 +270,10 @@ textarea[name="extra"] {
       height: 40px;
       border: 2px solid #444444;
       border-radius: 50%;
+      @include tablet {
+        width: 52px;
+        height: 52px;
+      }
     }
   }
   &--checkbox {
@@ -159,10 +281,17 @@ textarea[name="extra"] {
     margin-bottom: 22px;
     cursor: pointer;
     @include tablet {
-      width: 50%;
+      min-height: 52px;
+      width: 45%;
+      margin-bottom: 24px;
     }
     @include desktop {
       width: 33%;
+    }
+    &:nth-of-type(odd) {
+      @include tablet {
+        margin-right: 37px;
+      }
     }
     &:before {
       position: absolute;
@@ -172,12 +301,19 @@ textarea[name="extra"] {
       width: 40px;
       height: 40px;
       border: 2px solid #444444;
+      @include tablet {
+        width: 54px;
+        height: 52px;
+      }
     }
   }
   &--name {
     padding-left: 0;
     padding-top: 0;
     margin-bottom: 1px;
+    @include tablet {
+      margin-right: 25px;
+    }
   }
 }
 .order-form__radio-control:checked + .order-form__label--radio::after {
@@ -191,6 +327,12 @@ textarea[name="extra"] {
   left: 12px;
   top: 43%;
   transform: translateY(-50%);
+  @include tablet {
+    width: 22px;
+    height: 22px;
+    left: 15px;
+    top: 54%;
+  }
 }
 .order-form__checkbox-control:checked + .order-form__label--checkbox::after {
   content: '';
@@ -203,12 +345,21 @@ textarea[name="extra"] {
   left: 10px;
   top: 15px;
   transform: rotate(-45deg);
+  @include tablet {
+    width: 30px;
+    height: 15px;
+    left: 12px;
+    top: 16px;
+  }
+
 }
 
 .order-form__name-wrap {
   margin-bottom: 23px;
   @include tablet {
     display: flex;
+    align-items: baseline;
+    margin-bottom: 25px;
   }
 }
 
@@ -230,9 +381,15 @@ textarea[name="extra"] {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: baseline;
+    padding-top: 47px;
   }
 }
 .order-form__note {
   font-size: rem(14px);
   line-height: rem(16px);
+  @include tablet {
+    font-size: rem(17px);
+    line-height: rem(30px);
+  }
 }

@@ -35,16 +35,16 @@
     <div class="promo promo--form">
       <div class="promo__wrap promo__wrap--form container">
         <p class="promo__shipping">Бесплатная доставка по России</p>
-        <h1 class="promo__title">Вязание на заказ</h1>
+        <h1 class="promo__title promo__title--form">Вязание на заказ</h1>
       </div>
     </div>
   </header>
 
-  <form class="order-form container">
-    <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+  <form class="order-form">
+    <p class="order-form__text container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
       свяжемся с вами, чтобы уточнить детали.</p>
 
-    <div class="order-form__group order-form__group--radio">
+    <div class="order-form__group order-form__group--radio container">
       <h2 class="order-form__legend order-form__legend--radio">Тип</h2>
       <div class="order-form__label-wrap">
         <input class="order-form__radio-control" type="radio" name="type" id="accessory" checked>
@@ -56,30 +56,32 @@
     </div>
 
     <div class="order-form__group order-form__group--checkbox">
-      <h2 class="order-form__legend order-form__legend--checkbox">Цвет</h2>
-      <div class="order-form__label-wrap order-form__label-wrap--checkbox">
+      <div class="order-form__group-wrap order-form__group-wrap--checkbox container">
+        <h2 class="order-form__legend order-form__legend--checkbox">Цвет</h2>
+        <div class="order-form__label-wrap order-form__label-wrap--checkbox">
 
-        <input class="order-form__checkbox-control" type="checkbox" name="white" id="white" checked>
-        <label class="order-form__label order-form__label--checkbox" for="white">Белый</label>
+          <input class="order-form__checkbox-control" type="checkbox" name="white" id="white" checked>
+          <label class="order-form__label order-form__label--checkbox" for="white">Белый</label>
 
-        <input class="order-form__checkbox-control" type="checkbox" name="gray" id="gray" checked>
-        <label class="order-form__label order-form__label--checkbox" for="gray">Серый</label>
+          <input class="order-form__checkbox-control" type="checkbox" name="gray" id="gray" checked>
+          <label class="order-form__label order-form__label--checkbox" for="gray">Серый</label>
 
-        <input class="order-form__checkbox-control" type="checkbox" name="tiffany" id="tiffany">
-        <label class="order-form__label order-form__label--checkbox" for="tiffany">"Тиффани"</label>
+          <input class="order-form__checkbox-control" type="checkbox" name="tiffany" id="tiffany">
+          <label class="order-form__label order-form__label--checkbox" for="tiffany">&laquo;Тиффани&raquo;</label>
 
-        <input class="order-form__checkbox-control" type="checkbox" name="black" id="black">
-        <label class="order-form__label order-form__label--checkbox" for="black">Черный</label>
+          <input class="order-form__checkbox-control" type="checkbox" name="black" id="black">
+          <label class="order-form__label order-form__label--checkbox" for="black">Черный</label>
 
-        <input class="order-form__checkbox-control" type="checkbox" name="pink" id="pink">
-        <label class="order-form__label order-form__label--checkbox" for="pink">Розовый</label>
+          <input class="order-form__checkbox-control" type="checkbox" name="pink" id="pink">
+          <label class="order-form__label order-form__label--checkbox" for="pink">Розовый</label>
 
-        <input class="order-form__checkbox-control" type="checkbox" name="orange" id="orange">
-        <label class="order-form__label order-form__label--checkbox" for="orange">Оранжевый</label>
+          <input class="order-form__checkbox-control" type="checkbox" name="orange" id="orange">
+          <label class="order-form__label order-form__label--checkbox" for="orange">Оранжевый</label>
+        </div>
       </div>
     </div>
 
-    <div class="order-form__group order-form__group--name">
+    <div class="order-form__group order-form__group--name container">
       <h2 class="order-form__legend order-form__legend--name">ФИО</h2>
       <div class="order-form__label-wrap">
         <div class="order-form__name-wrap">
@@ -97,28 +99,34 @@
       </div>
     </div>
 
-    <div class="order-form__group order-form__group--tel">
-      <h2 class="order-form__legend order-form__legend--tel">Тел</h2>
-      <div class="order-form__label-wrap order-form__label-wrap--tel">
-        <input class="order-form__input--tel" type="tel" name="phone" id="phone" placeholder="+7 XXX XX XX*" required>
+    <div class="order-form__group order-form__group--contacts">
+      <div class="order-form__group-wrap order-form__group-wrap--tel container">
+        <div class="order-form__group order-form__group--tel">
+          <h2 class="order-form__legend order-form__legend--tel">Тел</h2>
+          <div class="order-form__label-wrap order-form__label-wrap--tel">
+            <input class="order-form__input--tel" type="tel" name="phone" id="phone" placeholder="+7 XXX XX XX*"
+                   required>
+          </div>
+        </div>
+
+        <div class="order-form__group order-form__group--email">
+          <h2 class="order-form__legend order-form__legend--email">E-mail</h2>
+          <div class="order-form__label-wrap order-form__label-wrap--email">
+            <input class="order-form__input--email" type="email" name="mail" id="email" placeholder="Ваш Email*"
+                   required>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="order-form__group order-form__group--email">
-      <h2 class="order-form__legend order-form__legend--email">E-mail</h2>
-      <div class="order-form__label-wrap order-form__label-wrap--email">
-        <input class="order-form__input--email" type="email" name="mail" id="email" placeholder="Ваш Email*" required>
-      </div>
-    </div>
-
-    <div class="order-form__group">
-      <h2 class="order-form__legend">Доп</h2>
+    <div class="order-form__group order-form__group--extra container">
+      <h2 class="order-form__legend order-form__legend--extra">Доп</h2>
       <div class="order-form__label-wrap">
         <textarea name="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </div>
     </div>
 
-    <div class="order-form__note-wrap">
+    <div class="order-form__note-wrap container">
       <span class="order-form__note">*Поля обязательны для заполнения</span>
       <button class="btn btn--order" type="submit">Отправить заказ</button>
     </div>

@@ -58,6 +58,7 @@
   &--order {
     margin-top: 28px;
     @include tablet {
+      margin-top: 0;
       width: 34.431137724%;
     }
   }
