@@ -59,7 +59,7 @@
           </div>
           <div class="product__price-wrap">
             <span class="product__price">1 200 руб.</span>
-            <a href="#" class="product__add">Добавить в корзину</a>
+            <a href="#" class="product__add modal--open">Добавить в корзину</a>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
           </div>
           <div class="product__price-wrap">
             <span class="product__price">690 руб.</span>
-            <a href="#" class="product__add">Добавить в корзину</a>
+            <a href="#" class="product__add modal--open">Добавить в корзину</a>
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
           </div>
           <div class="product__price-wrap">
             <span class="product__price">1 500 руб.</span>
-            <a href="#" class="product__add">Добавить в корзину</a>
+            <a href="#" class="product__add modal--open">Добавить в корзину</a>
           </div>
         </div>
       </div>
@@ -133,24 +133,27 @@
   </footer>
 
   <div class="modal">
-    <h2 class="modal__title">Добавить в корзину</h2>
-    <form class="modal-form">
-      <span class="modal__text">Выберите размер:</span>
-      <div class="modal-form__radio-wrap"><label for="s">
-        <input type="radio" id="s" name="size">
-        S
-      </label>
-        <label for="m">
-          <input type="radio" id="m" name="size">
-          M
-        </label>
-        <label for="l">
-          <input type="radio" id="l" name="size">
-          L
-        </label>
+    <div class="modal__content">
+      <div class="modal__content-wrap">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <form class="modal-form">
+          <span class="modal__text">Выберите размер:</span>
+          <div class="modal-form__radio-wrap">
+            <input class="modal__radio-control" type="radio" id="s" name="size" checked>
+            <label class="modal__radio" for="s">s</label>
+
+            <input class="modal__radio-control" type="radio" id="m" name="size">
+            <label class="modal__radio" for="m">m</label>
+
+            <input class="modal__radio-control" type="radio" id="l" name="size">
+            <label class="modal__radio" for="l">l</label>
+
+          </div>
+          <button class="btn btn--modal modal--close" type="submit">Добавить</button>
+        </form>
       </div>
-      <button class="btn btn--modal" type="submit">Добавить</button>
-    </form>
+    </div>
   </div>
+  <script src="js/common.js"></script>
 </body>
 </html>

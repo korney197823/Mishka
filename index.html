@@ -74,7 +74,7 @@
               <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Корзинки">
             </div>
             <span class="product-week__price">Цена: 990 руб.</span>
-            <a href="#" class="btn">Заказать</a>
+            <a href="#" class="btn modal--open">Заказать</a>
           </div>
         </div>
       </section>
@@ -167,24 +167,26 @@
     </footer>
 
     <div class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="modal-form">
-        <span class="modal__text">Выберите размер:</span>
-        <div class="modal-form__radio-wrap"><label for="s">
-          <input type="radio" id="s" name="size">
-            S
-          </label>
-          <label for="m">
-            <input type="radio" id="m" name="size">
-            M
-          </label>
-          <label for="l">
-            <input type="radio" id="l" name="size">
-            L
-          </label>
+      <div class="modal__content">
+        <div class="modal__content-wrap">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <form class="modal-form">
+            <span class="modal__text">Выберите размер:</span>
+            <div class="modal-form__radio-wrap">
+              <input class="modal__radio-control" type="radio" id="s" name="size" checked>
+              <label class="modal__radio" for="s">s</label>
+
+              <input class="modal__radio-control" type="radio" id="m" name="size">
+              <label class="modal__radio" for="m">m</label>
+
+              <input class="modal__radio-control" type="radio" id="l" name="size">
+              <label class="modal__radio" for="l">l</label>
+
+            </div>
+            <button class="btn btn--modal modal--close" type="submit">Добавить</button>
+          </form>
         </div>
-        <button class="btn btn--modal" type="submit">Добавить</button>
-      </form>
+      </div>
     </div>
     <script src="js/common.js"></script>
   </body>
